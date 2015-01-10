@@ -53,8 +53,8 @@ class AtomRenderFrameObserver : public content::RenderFrameObserver {
         renderer_client_(renderer_client) {}
 
   // content::RenderFrameObserver:
-  virtual void WillReleaseScriptContext(v8::Handle<v8::Context> context,
-                                        int world_id) OVERRIDE {
+  void WillReleaseScriptContext(v8::Handle<v8::Context> context,
+                                int world_id) override {
     renderer_client_->WillReleaseScriptContext(
         render_frame()->GetWebFrame(), context, world_id);
   }

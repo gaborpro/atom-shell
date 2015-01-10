@@ -42,7 +42,7 @@ class AtomRendererClient : public content::ContentRendererClient,
   };
 
   // content::RenderProcessObserver:
-  virtual void WebKitInitialized() OVERRIDE;
+  void WebKitInitialized() override;
 
   // content::ContentRendererClient:
   void RenderThreadStarted() override;
